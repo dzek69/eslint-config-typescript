@@ -36,7 +36,21 @@ const basicRules = {
         allowHigherOrderFunctions: true,
         allowDirectConstAssertionInArrowFunctions: false,
         allowConciseArrowFunctionExpressionsStartingWithVoid: false,
-    }]
+    }],
+    "@typescript-eslint/explicit-member-accessibility": [ERROR, { accessibility: "explicit" }], // @TODO consider no-public?
+    "@typescript-eslint/explicit-module-boundary-types": OFF,
+    "@typescript-eslint/member-delimiter-style": [ERROR, {
+        multiline: {
+            "delimiter": "semi",
+            "requireLast": true
+        },
+        singleline: {
+            "delimiter": "semi",
+            "requireLast": false
+        },
+    }],
+    "@typescript-eslint/member-ordering": OFF, // @TODO looks useful, but takes a lot of time to configure
+    "@typescript-eslint/method-signature-style": [ERROR, "property"],
 };
 
 module.exports = {
