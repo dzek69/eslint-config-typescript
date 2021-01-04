@@ -30,7 +30,7 @@ const basicRules = {
         prefer: "type-imports",
         disallowTypeAnnotations: true,
     }],
-    "@typescript-eslint/explicit-function-return-type": [ERROR, {
+    "@typescript-eslint/explicit-function-return-type": [OFF, {
         allowExpressions: true,
         allowTypedFunctionExpressions: true,
         allowHigherOrderFunctions: true,

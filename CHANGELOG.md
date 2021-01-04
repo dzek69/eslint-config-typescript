@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [UNRELEASED]
 (nothing yet)
 
+## [0.1.1] - 2021-01-04
+### Changed
+- disabled `explicit-function-return-type` rule
+
 ## [0.1.0] - 2020-12-28
 ### Added
 - `naming-convention` rule
