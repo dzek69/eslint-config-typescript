@@ -30,8 +30,7 @@ if needed).
 
 Then to lint `src` and `test` directories with subdirectories run:
 ```
-@TODO: This needs an upgrade with --ext option
-npx eslint src/**/*.js src/*.js test/**/*.js test/*.js
+npx eslint src test --ext .ts,.tsx,.js,.jsx,.mjs
 ```
 
 ## Test files issues
@@ -41,7 +40,42 @@ with proper `include` property set, see [this](https://www.npmjs.com/package/@ty
 
 ## Full config example
 
-@TODO
+```json
+{
+    "extends": [
+        "@dzek69/eslint-config-base",
+        "@dzek69/eslint-config-typescript"
+    ],
+    "env": {
+        "node": true
+    },
+    "parserOptions": {
+        "sourceType": "module",
+        "project": "./tsconfig.lint.json"
+    },
+    "ignorePatterns": [],
+    "overrides": [
+        {
+            "files": [
+                "src/*.spec.*", "src/**/*.spec.*"
+            ],
+            "env": {
+                "jest": true
+            },
+            "rules": {
+                "func-names": "off",
+                "global-require": "off",
+                "max-lines": "off",
+                "max-lines-per-function": "off",
+                "max-statements": "off",
+                "@typescript-eslint/no-empty-function": "off",
+                "@typescript-eslint/no-magic-numbers": "off",
+                "no-unused-labels": "off"
+            }
+        }
+    ]
+}
+```
 
 ## License
 

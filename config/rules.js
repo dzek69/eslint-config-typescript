@@ -211,7 +211,7 @@ const extensionRules = {
 
     "dot-notation": OFF,
     "@typescript-eslint/dot-notation": [ERROR, {
-        allowKeywords: false,
+        allowKeywords: true,
         allowPattern: undefined,
         allowPrivateClassPropertyAccess: false,
         allowProtectedClassPropertyAccess: false,
