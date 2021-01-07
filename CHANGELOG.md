@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [UNRELEASED]
 (nothing yet)
 
+## [0.2.0] - 2021-01-07
+### Added
+- TypeScript globals to environment config
+
 ## [0.1.2] - 2021-01-06
 ### Changed
 - `dot-notation` `allowKeywords` option
