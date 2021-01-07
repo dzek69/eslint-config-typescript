@@ -11,7 +11,7 @@ const basicRules = {
     "@typescript-eslint/array-type": [ERROR, { default: "array" }],
     "@typescript-eslint/await-thenable": WARN,
     "@typescript-eslint/ban-ts-comment": [ERROR, {
-        "ts-expect-error": true,
+        "ts-expect-error": "allow-with-description",
         "ts-ignore": "allow-with-description",
         "ts-nocheck": "allow-with-description",
         "ts-check": false,
