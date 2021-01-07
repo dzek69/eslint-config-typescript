@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [UNRELEASED]
 (nothing yet)
 
+## [0.2.2] - 2021-01-07
+### Changed
+- `strict-boolean-expressions` turned off
+
 ## [0.2.1] - 2021-01-07
 ### Changed
 - `ban-ts-comment` will allow `ts-expect-error` with description

@@ -160,7 +160,7 @@ const basicRules = {
         allowAny: false,
         allowNullish: false,
     }],
-    "@typescript-eslint/strict-boolean-expressions": [WARN, { // @TODO to be verified
+    "@typescript-eslint/strict-boolean-expressions": [OFF, {
         allowString: true,
         allowNumber: true,
         allowNullableObject: true,
