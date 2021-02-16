@@ -12,6 +12,7 @@ module.exports = {
         Partial: true,
         Readonly: true,
         Record: true,
+        Pick: true,
         Omit: true,
         Exclude: true,
         Extract: true,

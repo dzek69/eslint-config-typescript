@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [UNRELEASED]
 (nothing yet)
 
+## [0.2.3] - 2021-02-16
+### Fixed
+- added `Pick` to globals
+### Changed
+- `promise-function-async` turned off
+
 ## [0.2.2] - 2021-01-07
 ### Changed
 - `strict-boolean-expressions` turned off

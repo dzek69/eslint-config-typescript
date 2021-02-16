@@ -140,8 +140,8 @@ const basicRules = {
     "@typescript-eslint/prefer-regexp-exec": WARN,
     "@typescript-eslint/prefer-string-starts-ends-with": ERROR,
     "@typescript-eslint/prefer-ts-expect-error": ERROR,
-    "@typescript-eslint/promise-function-async": [WARN, { // @TODO to be verified
-        allowAny: true, // @TODO or false?
+    "@typescript-eslint/promise-function-async": [OFF, {
+        allowAny: true,
         allowedPromiseNames: [],
         checkArrowFunctions: true,
         checkFunctionDeclarations: true,
