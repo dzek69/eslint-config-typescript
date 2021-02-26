@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [UNRELEASED]
 (nothing yet)
 
+## [0.2.4] - 2021-02-26
+### Fixed
+- `prefer-nullish-coalescing` turned off
+
 ## [0.2.3] - 2021-02-16
 ### Fixed
 - added `Pick` to globals

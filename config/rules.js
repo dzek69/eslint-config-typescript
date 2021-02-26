@@ -127,7 +127,7 @@ const basicRules = {
     "@typescript-eslint/prefer-includes": WARN,
     "@typescript-eslint/prefer-literal-enum-member": WARN,
     "@typescript-eslint/prefer-namespace-keyword": ERROR, // should not be used in ES2015+ automatically
-    "@typescript-eslint/prefer-nullish-coalescing": [ERROR, {
+    "@typescript-eslint/prefer-nullish-coalescing": [OFF, { // annoying
         ignoreConditionalTests: true,
         ignoreMixedLogicalExpressions: true,
     }],
