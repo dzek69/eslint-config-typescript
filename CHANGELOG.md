@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [UNRELEASED]
 (nothing yet)
 
+## [0.3.1] - 2021-05-09
+### Changed
+- reverted `consistent-type-definitions`
+- changed `consistent-indexed-object-style` from preferring record to preferring index-signature
+
 ## [0.3.0] - 2021-05-09
 ### Changed
 - `consistent-type-definitions` rule from preferring interfaces to preferring types
