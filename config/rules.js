@@ -25,7 +25,7 @@ const basicRules = {
         assertionStyle: "as",
         objectLiteralTypeAssertions: "never",
     }],
-    "@typescript-eslint/consistent-type-definitions": [ERROR, "interface"],
+    "@typescript-eslint/consistent-type-definitions": [ERROR, "type"],
     "@typescript-eslint/consistent-type-imports": [ERROR, {
         prefer: "type-imports",
         disallowTypeAnnotations: true,
