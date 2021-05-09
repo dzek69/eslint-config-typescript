@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [UNRELEASED]
 (nothing yet)
 
+## [0.3.2] - 2021-05-09
+### Changed
+- `ban-types` to allow `object` type to be used
+### Dev
+- `yarn.lock` update to fix some audit messages
+
 ## [0.3.1] - 2021-05-09
 ### Changed
 - reverted `consistent-type-definitions`

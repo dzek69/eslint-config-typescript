@@ -18,7 +18,12 @@ const basicRules = {
         "minimumDescriptionLength": 10,
     }],
     "@typescript-eslint/ban-tslint-comment": OFF,
-    "@typescript-eslint/ban-types": [ERROR, { extendDefaults: true }],
+    "@typescript-eslint/ban-types": [ERROR, {
+        types: {
+            object: false,
+        },
+        extendDefaults: true,
+    }],
     "@typescript-eslint/class-literal-property-style": [WARN, "fields"], // @TODO needs verification in real life
     "@typescript-eslint/consistent-indexed-object-style": [ERROR, "index-signature"],
     "@typescript-eslint/consistent-type-assertions": [ERROR, {
