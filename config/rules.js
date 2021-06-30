@@ -362,6 +362,8 @@ const extensionRules = {
     "@typescript-eslint/space-infix-ops": [ERROR, {
         int32Hint: false,
     }],
+
+    "valid-jsdoc": OFF,
 };
 
 module.exports = {
