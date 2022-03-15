@@ -25,12 +25,12 @@ const basicRules = {
         extendDefaults: true,
     }],
     "@typescript-eslint/class-literal-property-style": [WARN, "fields"], // @TODO needs verification in real life
-    "@typescript-eslint/consistent-indexed-object-style": [ERROR, "index-signature"],
+    "@typescript-eslint/consistent-indexed-object-style": [OFF], // the syntaxes mean different things
     "@typescript-eslint/consistent-type-assertions": [ERROR, {
         assertionStyle: "as",
         objectLiteralTypeAssertions: "never",
     }],
-    "@typescript-eslint/consistent-type-definitions": [ERROR, "interface"],
+    "@typescript-eslint/consistent-type-definitions": [OFF], // syntaxes mean different things
     "@typescript-eslint/consistent-type-imports": [ERROR, {
         prefer: "type-imports",
         disallowTypeAnnotations: true,

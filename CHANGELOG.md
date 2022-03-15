@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [UNRELEASED]
 (nothing yet)
 
+## [0.5.0] - 2022-03-15
+### Removed
+- `consistent-type-definitions`
+- `consistent-indexed-object-style` - both are fixing things that have different meaning, not different syntax only
+### Dev
+- version bumps for security
+
 ## [0.4.0] - 2021-06-30
 ### Removed
 - `valid-jsdoc` because it conflicts with typedoc
