@@ -1,6 +1,6 @@
 # eslint-config-react
 
-This is my preferred Typescript code style linting rules. You'll probably hate them.
+These are my preferred Typescript code style linting rules. You'll probably hate them.
 
 ## Idea behind these
 
@@ -37,6 +37,11 @@ npx eslint src test --ext .ts,.tsx,.js,.jsx,.mjs
 
 If eslint complains on your test files being outside of your app source code dir please set some special `.tsconfig`
 with proper `include` property set, see [this](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin).
+
+## Usage with eslint import plugin
+
+If you are using import plugin then disable `@typescript-eslint/no-duplicate-imports` rule. Base `no-duplicate-imports`
+is disabled already by using my TS config.
 
 ## Full config example
 

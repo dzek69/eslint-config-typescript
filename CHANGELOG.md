@@ -6,6 +6,33 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [UNRELEASED]
 (nothing yet)
 
+## [1.0.0] - 2022-07-02
+### Added
+- `consistent-generic-constructors` rule
+- `consistent-type-exports` rule
+- `no-duplicate-enum-values` rule
+- `no-non-null-asserted-nullish-coalescing` rule
+- `no-redundant-type-constituents` rule
+- `no-unsafe-argument` rule
+- `no-useless-empty-export` rule
+- `object-curly-spacing` rule
+- `space-before-blocks"` rule
+- `no-meaningless-void-operator` disabled rule
+- `prefer-return-this-type` disabled rule
+- `sort-type-union-intersection-members` disabled rule
+- `padding-line-between-statements` disabled rule
+- `no-restricted-imports` disabled rule
+### Changed
+- `member-delimiter-style` explicit configuration of new option `multilineDetection`
+- `restrict-plus-operands` explicit configuration of new option `allowAny`
+- `restrict-template-expressions` explicit configuration of new option `allowRegExp`
+- `unified-signatures` configuration of new option `ignoreDifferentlyNamedParameters`
+- `no-magic-numbers` configuration of new option `ignoreTypeIndexes`
+- `no-shadow` configuration of new options `ignoreOnInitialization`, `allow`
+- `no-throw-literal` configuration of new options `allowThrowingAny`, `allowThrowingUnknown`
+- `no-unused-vars` configuration of new option `destructuredArrayIgnorePattern`
+- `no-parameter-properties` disabled, replaced with `parameter-properties`
+
 ## [0.5.0] - 2022-03-15
 ### Removed
 - `consistent-type-definitions`

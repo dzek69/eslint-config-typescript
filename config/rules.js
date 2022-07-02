@@ -25,12 +25,16 @@ const basicRules = {
         extendDefaults: true,
     }],
     "@typescript-eslint/class-literal-property-style": [WARN, "fields"], // @TODO needs verification in real life
+    "@typescript-eslint/consistent-generic-constructors": [ERROR, "constructor"],
     "@typescript-eslint/consistent-indexed-object-style": [OFF], // the syntaxes mean different things
     "@typescript-eslint/consistent-type-assertions": [ERROR, {
         assertionStyle: "as",
         objectLiteralTypeAssertions: "never",
     }],
     "@typescript-eslint/consistent-type-definitions": [OFF], // syntaxes mean different things
+    "@typescript-eslint/consistent-type-exports": [ERROR, {
+        fixMixedExportsWithInlineTypeSpecifier: false,
+    }],
     "@typescript-eslint/consistent-type-imports": [ERROR, {
         prefer: "type-imports",
         disallowTypeAnnotations: true,
@@ -53,6 +57,7 @@ const basicRules = {
             "delimiter": "semi",
             "requireLast": false,
         },
+        multilineDetection: "brackets",
     }],
     "@typescript-eslint/member-ordering": OFF, // @TODO looks useful, but takes a lot of time to configure
     "@typescript-eslint/method-signature-style": [ERROR, "property"],
@@ -63,6 +68,7 @@ const basicRules = {
         ignoreArrowShorthand: false,
         ignoreVoidOperator: false,
     }],
+    "@typescript-eslint/no-duplicate-enum-values": ERROR,
     "@typescript-eslint/no-dynamic-delete": ERROR,
     "@typescript-eslint/no-empty-interface": OFF,
     "@typescript-eslint/no-explicit-any": [WARN, {
@@ -92,6 +98,7 @@ const basicRules = {
         allowInGenericTypeArguments: true,
         allowAsThisParameter: false,
     }],
+    "@typescript-eslint/no-meaningless-void-operator": OFF,
     "@typescript-eslint/no-misused-new": WARN,
     "@typescript-eslint/no-misused-promises": [ERROR, {
         checksVoidReturn: true,
@@ -101,9 +108,11 @@ const basicRules = {
         allowDeclarations: false,
         allowDefinitionFiles: true,
     }],
+    "@typescript-eslint/no-non-null-asserted-nullish-coalescing": ERROR,
     "@typescript-eslint/no-non-null-asserted-optional-chain": ERROR,
     "@typescript-eslint/no-non-null-assertion": OFF,
-    "@typescript-eslint/no-parameter-properties": [ERROR, { allows: undefined }],
+    "@typescript-eslint/no-parameter-properties": OFF,
+    "@typescript-eslint/no-redundant-type-constituents": WARN,
     "@typescript-eslint/no-require-imports": WARN,
     "@typescript-eslint/no-this-alias": [OFF, {
         allowDestructuring: true,
@@ -119,12 +128,18 @@ const basicRules = {
     "@typescript-eslint/no-unnecessary-type-arguments": WARN, // @TODO to decide
     "@typescript-eslint/no-unnecessary-type-assertion": ERROR,
     "@typescript-eslint/no-unnecessary-type-constraint": ERROR,
+    "@typescript-eslint/no-unsafe-argument": ERROR,
     "@typescript-eslint/no-unsafe-assignment": ERROR,
     "@typescript-eslint/no-unsafe-call": ERROR,
     "@typescript-eslint/no-unsafe-member-access": ERROR,
     "@typescript-eslint/no-unsafe-return": ERROR,
+    "@typescript-eslint/no-useless-empty-export": WARN,
     "@typescript-eslint/no-var-requires": ERROR,
     "@typescript-eslint/non-nullable-type-assertion-style": OFF,
+    "@typescript-eslint/parameter-properties": [ERROR, {
+        // allow: [],
+        prefer: "class-property",
+    }],
     "@typescript-eslint/prefer-as-const": OFF,
     "@typescript-eslint/prefer-enum-initializers": OFF,
     "@typescript-eslint/prefer-for-of": OFF,
@@ -143,6 +158,7 @@ const basicRules = {
     "@typescript-eslint/prefer-readonly-parameter-types": OFF, // no-param-reassign will take care of that
     "@typescript-eslint/prefer-reduce-type-parameter": ERROR,
     "@typescript-eslint/prefer-regexp-exec": WARN,
+    "@typescript-eslint/prefer-return-this-type": OFF, // ts handles it already
     "@typescript-eslint/prefer-string-starts-ends-with": ERROR,
     "@typescript-eslint/prefer-ts-expect-error": ERROR,
     "@typescript-eslint/promise-function-async": [OFF, {
@@ -158,13 +174,16 @@ const basicRules = {
     }],
     "@typescript-eslint/restrict-plus-operands": [ERROR, {
         checkCompoundAssignments: true,
+        allowAny: false,
     }],
     "@typescript-eslint/restrict-template-expressions": [ERROR, {
         allowNumber: true,
         allowBoolean: false,
         allowAny: false,
         allowNullish: false,
+        allowRegExp: false,
     }],
+    "@typescript-eslint/sort-type-union-intersection-members": OFF,
     "@typescript-eslint/strict-boolean-expressions": [OFF, {
         allowString: true,
         allowNumber: true,
@@ -186,7 +205,9 @@ const basicRules = {
     "@typescript-eslint/unbound-method": [WARN, {
         ignoreStatic: true,
     }],
-    "@typescript-eslint/unified-signatures": WARN,
+    "@typescript-eslint/unified-signatures": [WARN, {
+        ignoreDifferentlyNamedParameters: true,
+    }],
 };
 
 const extensionRules = {
@@ -252,7 +273,7 @@ const extensionRules = {
     "@typescript-eslint/no-dupe-class-members": ERROR,
 
     "no-duplicate-imports": OFF,
-    "@typescript-eslint/no-duplicate-imports": [ERROR, {
+    "@typescript-eslint/no-duplicate-imports": [ERROR, { // @TODO - deprecated https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/no-duplicate-imports.md
         includeExports: true,
     }],
 
@@ -287,6 +308,7 @@ const extensionRules = {
         ignoreEnums: true,
         ignoreNumericLiteralTypes: true,
         ignoreReadonlyClassProperties: true,
+        ignoreTypeIndexes: true,
     }],
 
     "no-redeclare": OFF,
@@ -296,12 +318,17 @@ const extensionRules = {
     "@typescript-eslint/no-shadow": [ERROR, {
         builtinGlobals: true,
         hoist: "all",
+        ignoreOnInitialization: true,
+        allow: [],
         ignoreTypeValueShadow: false,
         ignoreFunctionTypeParameterNameValueShadow: false,
     }],
 
     "no-throw-literal": OFF,
-    "@typescript-eslint/no-throw-literal": ERROR,
+    "@typescript-eslint/no-throw-literal": [ERROR, {
+        allowThrowingAny: false,
+        allowThrowingUnknown: false,
+    }],
 
     "no-unused-expressions": OFF,
     "@typescript-eslint/no-unused-expressions": [ERROR, {
@@ -319,6 +346,7 @@ const extensionRules = {
         caughtErrors: "all", // can omit `(error)` instead
         caughtErrorsIgnorePattern: undefined,
         ignoreRestSiblings: true,
+        destructuredArrayIgnorePattern: "^_",
     }],
 
     "no-use-before-define": OFF,
@@ -364,6 +392,18 @@ const extensionRules = {
     }],
 
     "valid-jsdoc": OFF,
+
+    "object-curly-spacing": OFF,
+    "@typescript-eslint/object-curly-spacing": [ERROR, "always"],
+
+    "padding-line-between-statements": OFF,
+    "@typescript-eslint/padding-line-between-statements": OFF, // @TODO would be nice to have this configured
+
+    "no-restricted-imports": OFF,
+    "@typescript-eslint/no-restricted-imports": OFF,
+
+    "space-before-blocks": OFF,
+    "@typescript-eslint/space-before-blocks": [ERROR, "always"],
 };
 
 module.exports = {

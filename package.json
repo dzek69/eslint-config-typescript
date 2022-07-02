@@ -1,6 +1,6 @@
 {
   "name": "@dzek69/eslint-config-typescript",
-  "version": "0.5.0",
+  "version": "1.0.0",
   "main": ".eslintrc.json",
   "repository": "https://github.com/dzek69/eslint-config-typescript.git",
   "author": "Jacek Nowacki @dzek69 <git-public@dzek.eu>",
@@ -11,16 +11,16 @@
     "prepack": "npm run test && npm run docs"
   },
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.11.1",
-    "@typescript-eslint/parser": "^4.11.1",
-    "eslint": "^7.14.0",
+    "@typescript-eslint/eslint-plugin": "^5.30.3",
+    "@typescript-eslint/parser": "^5.30.3",
+    "eslint": "^8.18.0",
     "typescript": "^4.1.2"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.11.1",
-    "@typescript-eslint/parser": "^4.11.1",
+    "@typescript-eslint/eslint-plugin": "^5.30.3",
+    "@typescript-eslint/parser": "^5.30.3",
     "docdash": "^1.1.1",
-    "eslint": "^7.14.0",
+    "eslint": "^8.18.0",
     "fs-extra": "^7.0.1",
     "jsdoc": "^3.6.10",
     "typescript": "^4.1.2"
