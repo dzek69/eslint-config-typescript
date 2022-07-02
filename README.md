@@ -1,4 +1,4 @@
-# eslint-config-react
+# eslint-config-typescript
 
 These are my preferred Typescript code style linting rules. You'll probably hate them.
 

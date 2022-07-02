@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [UNRELEASED]
 (nothing yet)
 
+## [1.0.1] - 2022-07-02
+### Fixed
+- readme: wrong package name
+
 ## [1.0.0] - 2022-07-02
 ### Added
 - `consistent-generic-constructors` rule
