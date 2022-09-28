@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [UNRELEASED]
 (nothing yet)
 
+## [1.0.2] - 2022-09-28
+### Dev
+- deps bump, no runtime change
+- removed unused docs generator
+
 ## [1.0.1] - 2022-07-02
 ### Fixed
 - readme: wrong package name
