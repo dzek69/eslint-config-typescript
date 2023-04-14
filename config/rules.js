@@ -37,15 +37,10 @@ const basicRules = {
     }],
     "@typescript-eslint/consistent-type-imports": [ERROR, {
         prefer: "type-imports",
+        fixStyle: "separate-type-imports",
         disallowTypeAnnotations: true,
     }],
-    "@typescript-eslint/explicit-function-return-type": [OFF, {
-        allowExpressions: true,
-        allowTypedFunctionExpressions: true,
-        allowHigherOrderFunctions: true,
-        allowDirectConstAssertionInArrowFunctions: false,
-        allowConciseArrowFunctionExpressionsStartingWithVoid: false,
-    }],
+    "@typescript-eslint/explicit-function-return-type": [OFF],
     "@typescript-eslint/explicit-member-accessibility": [ERROR, { accessibility: "explicit" }], // @TODO consider no-public?
     "@typescript-eslint/explicit-module-boundary-types": OFF,
     "@typescript-eslint/member-delimiter-style": [ERROR, {
@@ -69,6 +64,7 @@ const basicRules = {
         ignoreVoidOperator: false,
     }],
     "@typescript-eslint/no-duplicate-enum-values": ERROR,
+    "@typescript-eslint/no-duplicate-type-constituents": ERROR,
     "@typescript-eslint/no-dynamic-delete": ERROR,
     "@typescript-eslint/no-empty-interface": OFF,
     "@typescript-eslint/no-explicit-any": [WARN, {
@@ -87,6 +83,7 @@ const basicRules = {
         ignoreIIFE: false,
     }],
     "@typescript-eslint/no-for-in-array": ERROR,
+    "@typescript-eslint/no-import-type-side-effects": [ERROR],
     "@typescript-eslint/no-implicit-any-catch": [ERROR, {
         allowExplicitAny: false,
     }],
@@ -104,6 +101,7 @@ const basicRules = {
         checksVoidReturn: true,
         checksConditionals: true,
     }],
+    "@typescript-eslint/no-mixed-enums": [ERROR],
     "@typescript-eslint/no-namespace": [ERROR, {
         allowDeclarations: false,
         allowDefinitionFiles: true,
@@ -131,6 +129,8 @@ const basicRules = {
     "@typescript-eslint/no-unsafe-argument": ERROR,
     "@typescript-eslint/no-unsafe-assignment": ERROR,
     "@typescript-eslint/no-unsafe-call": ERROR,
+    "@typescript-eslint/no-unsafe-declaration-merging": ERROR,
+    "@typescript-eslint/no-unsafe-enum-comparison": ERROR,
     "@typescript-eslint/no-unsafe-member-access": ERROR,
     "@typescript-eslint/no-unsafe-return": ERROR,
     "@typescript-eslint/no-useless-empty-export": WARN,
@@ -182,6 +182,7 @@ const basicRules = {
         allowAny: false,
         allowNullish: false,
         allowRegExp: false,
+        allowNever: false,
     }],
     "@typescript-eslint/sort-type-union-intersection-members": OFF,
     "@typescript-eslint/strict-boolean-expressions": [OFF, {
@@ -191,6 +192,7 @@ const basicRules = {
         allowNullableBoolean: false,
         allowNullableString: false,
         allowNullableNumber: false,
+        allowNullableEnum: false,
         allowAny: false,
         allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing: false,
     }],
@@ -251,6 +253,17 @@ const extensionRules = {
         SwitchCase: 1,
     }],
 
+    "key-spacing": OFF,
+    "@typescript-eslint/key-spacing": [ERROR, {
+        beforeColon: false,
+        afterColon: true,
+        mode: "strict",
+        align: undefined,
+    }],
+
+    "block-spacing": OFF,
+    "@typescript-eslint/block-spacing": [ERROR, "always"],
+
     "init-declarations": OFF,
     "@typescript-eslint/init-declarations": OFF, // keep off
 
@@ -259,6 +272,9 @@ const extensionRules = {
         before: true,
         after: true,
     }],
+
+    "lines-around-comment": OFF,
+    "@typescript-eslint/lines-around-comment": OFF,
 
     "lines-between-class-members": OFF,
     "@typescript-eslint/lines-between-class-members": [ERROR, "always", {
@@ -406,9 +422,14 @@ const extensionRules = {
     "@typescript-eslint/space-before-blocks": [ERROR, "always"],
 };
 
+const notNeededWithTS = {
+    "no-new-native-nonconstructor": OFF,
+};
+
 module.exports = {
     rules: {
         ...basicRules,
         ...extensionRules,
+        ...notNeededWithTS,
     },
 };

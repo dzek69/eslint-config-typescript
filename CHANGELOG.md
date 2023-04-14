@@ -6,6 +6,22 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [UNRELEASED]
 (nothing yet)
 
+## [1.1.0] - 2023-04-14
+### Added
+- `no-duplicate-type-constituents` rule
+- `no-import-type-side-effects` rule
+- `no-mixed-enums` rule
+- `no-unsafe-declaration-merging` rule
+- `no-unsafe-enum-comparison` rule
+- `key-spacing` rule
+- `block-spacing` rule
+- `lines-around-comment` rule
+### Changed
+- `consistent-type-imports` fix style explicitly set
+- `restrict-template-expressions` explicit config for never
+- `strict-boolean-expressions` explicit config for nullable enum
+- `no-new-native-nonconstructor` non-ts rule disabled, not required with TS
+
 ## [1.0.2] - 2022-09-28
 ### Dev
 - deps bump, no runtime change
