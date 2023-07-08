@@ -175,6 +175,10 @@ const basicRules = {
     "@typescript-eslint/restrict-plus-operands": [ERROR, {
         checkCompoundAssignments: true,
         allowAny: false,
+        allowBoolean: false,
+        allowNullish: false,
+        allowNumberAndString: false,
+        allowRegExp: false,
     }],
     "@typescript-eslint/restrict-template-expressions": [ERROR, {
         allowNumber: true,
